@@ -19,7 +19,13 @@ class Movie
     {
         $instance = new static;
 
-        return $instance->format(R::getRow('SELECT * FROM movie WHERE id = ?', [$id]));
+        $movie = R::getRow('SELECT * FROM movie WHERE id = ?', [$id]);
+
+        if (!$movie) {
+            return [];
+        }
+
+        return $instance->format($movie);
     }
 
     public static function search(string $search): array

@@ -52,15 +52,19 @@ app()->get('/', function () {
 });
 
 app()->get('/movie/{id}/details', function ($id) {
-    $movie = Movie::find($id);
-
     // If it's not an HTMX request, buzz off.
     // This endpoint is only for HTMX requests.
     if (!is_htmx_request()) {
         return;
     }
     
-    // If it's an HTMX request, let's return the partials.
+    $movie = Movie::find($id);
+
+    if (empty($movie)) {
+        return;
+    }
+
+    // If it's an HTMX request and movie exists, let's return the partials.
     echo view()->render('partials.movie-details', [
         'movie' => $movie,
     ]);
