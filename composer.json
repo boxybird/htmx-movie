@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "leafs/leaf": "^3.5",
+    "leafs/blade": "^1.2",
+    "gabordemooij/redbean": "^5.7",
+    "vlucas/phpdotenv": "^5.5"
+  }
+}

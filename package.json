@@ -1,0 +1,17 @@
+{
+  "name": "htmx-movie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./app/resources/app.css -o ./public/app.css --watch",
+    "build": "npx tailwindcss -i ./app/resources/app.css -o ./public/app.css --minify"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3"
+  }
+}

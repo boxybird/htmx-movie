@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+  display: none !important;
+}
+
+.fade {
+  opacity: 0;
+  transition: all 600ms ease-out;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(-1rem);
+  transition: all 300ms ease-out;
+}
+
+.slide-right.in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 300ms ease-out;
+}
+
+.slide-up.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(1rem);
+  transition: all 300ms ease-out;
+}
+
+.slide-left.in {
+  opacity: 1;
+  transform: translateX(0);
+}
